@@ -1,0 +1,359 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --danger: #dc3545;
+    --balck-cover: #000000c4;
+}
+
+p {
+    margin: 0px;
+}
+
+hr {
+    margin: 0px;
+}
+
+.special-head {
+    width: 37%;
+    margin: 0px auto;
+}
+
+/* nav */
+
+.navbar {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    top: 85px;
+    color: white !important;
+    z-index: 3;
+}
+
+@media (max-width:991px) {
+    nav .collapse {
+        background-color: black;
+
+    }
+
+    nav .collapse ul {
+        margin: 10px 20px !important;
+    }
+
+    nav .collapse button {
+        margin: 0px 10px 10px;
+    }
+}
+
+nav .collapse ul a {
+    transition: 0.4s;
+}
+
+nav .collapse ul a:hover {
+    background-color: #dc354540;
+    border-radius: 30px;
+    color: var(--danger) !important;
+}
+
+@media (max-width:770px) {
+    .navbar {
+        top: 135px;
+    }
+}
+
+nav a {
+    color: white !important;
+}
+
+nav .but {
+    border: none;
+    color: white !important;
+}
+
+nav .dropdown-item:hover {
+    background-color: var(--balck-cover);
+}
+
+nav .navbar-toggler:focus {
+    border: none;
+    box-shadow: none !important;
+}
+
+/* end nav */
+/* hero */
+.hero {
+    height: 100vh;
+    background-image: url(../image/pngtree-college-student-receiving-guidance-from-teacher-in-a-computer-lab-photo-image_540703.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+
+}
+
+.hero::after,
+.leader::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000000c4;
+}
+
+.top {
+    position: relative;
+    top: -25px;
+    z-index: 1;
+}
+
+.text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 35%;
+}
+
+.top .start {
+    transition: 0.3s;
+}
+
+.top .start:hover {
+    color: var(--danger);
+}
+
+/* end hero */
+/* browse */
+
+span {
+    cursor: pointer;
+}
+
+.browse i,
+.become i,
+.about-us i {
+    color: var(--danger);
+}
+
+.browse .box {
+    cursor: pointer;
+}
+
+.browse .box .icon {
+    transition: 0.4s;
+}
+
+.browse .box:hover .icon {
+    background-color: black !important;
+}
+
+/* END browse */
+/* become */
+.become {
+    background-color: black;
+}
+
+.left,
+.right {
+    width: 40%;
+}
+
+.right ul {
+    padding: 0px;
+}
+
+.become .image {
+    height: 600px;
+    position: relative;
+    top: -80px;
+    background-color: #9d3a3a;
+}
+
+.become .image img {
+    position: absolute;
+    top: -35px;
+    height: 650px;
+    width: 100%;
+}
+
+@media (max-width:590px) {
+    .right {
+        width: 100%;
+    }
+
+    .become .image {
+        height: 170px;
+        position: relative;
+        top: -80px;
+        background-color: #9d3a3a;
+    }
+
+    .become .image img {
+        position: absolute;
+        top: 24px;
+        height: 150px;
+        width: 100%;
+    }
+}
+
+/* end become */
+
+/* Education */
+.education .box {
+    position: relative;
+}
+
+.education .box::after,
+.education .box::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.education .box::after {
+    right: 0px;
+}
+
+.education .box::before {
+    left: 0px;
+}
+
+.education .box:hover::after {
+    z-index: -1;
+    animation: right-move 0.5s linear forwards;
+}
+
+.education .box:hover::before {
+    z-index: -1;
+    animation: left-move 0.5s linear forwards;
+}
+
+.education .box:hover {
+    color: white;
+    border: 2px solid white;
+    transition-delay: 0.5s;
+}
+
+.education .box:hover i {
+    color: var(--danger);
+    background-color: white;
+    transition-delay: 0.5s;
+}
+
+@keyframes left-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+
+    100% {
+        left: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@keyframes right-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+
+    100% {
+        right: 0;
+        border-radius: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+
+
+/* End education */
+/* right-course */
+.right-course {
+    background-color: #9d3a3a;
+}
+
+/*end right-course */
+/* leader */
+.leader {
+    position: relative;
+    background-image: url(../image/study.jpg);
+    background-size: cover;
+    height: calc(100vh - 3rem);
+
+}
+
+/* end leader */
+/* about us */
+.about-us .iframe {
+    position: relative;
+    left: -100px;
+}
+
+.about-us .iframe::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -100px;
+    top: -20px;
+    width: 70%;
+    height: 100%;
+    background-color: #dc354561;
+}
+
+.about-us iframe {
+    width: 100%;
+    height: 300px;
+}
+
+@media (max-width:691px) {
+    .about-us .right {
+        width: 100%;
+    }
+
+    .about-us .left {
+        display: none;
+    }
+}
+
+/*end about us */
+/* testimonials */
+.testimonials button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+}
+
+.testimonials img {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+/*end testimonials */
+/* footer */
+footer img {
+    width: 100px !important;
+    height: 75px !important;
+    margin-bottom: 10px !important;
+}
+
+/* 
+<i class="fa-regular fa-circle-question me-2"></i>
+<i class="fa-solid fa-phone me-2"></i>
+<i class="fa-solid fa-phone me-2"></i>
+ <i class="me-1 fa-solid fa-lock"></i>
+ <i class="me-1 fa-solid fa-user"></i>
+*/
